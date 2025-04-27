@@ -22,11 +22,13 @@ import com.vaadin.flow.theme.lumo.LumoUtility.Margin;
 import com.vaadin.flow.theme.lumo.LumoUtility.MaxWidth;
 import com.vaadin.flow.theme.lumo.LumoUtility.Padding;
 import com.vaadin.flow.theme.lumo.LumoUtility.TextColor;
+import jakarta.annotation.security.RolesAllowed;
 import org.vaadin.lineawesome.LineAwesomeIconUrl;
 
-@PageTitle("Tapahtumat")
+@PageTitle("view")
 @Route("")
 @Menu(order = 0, icon = LineAwesomeIconUrl.TH_LIST_SOLID)
+@RolesAllowed("USER")
 public class TapahtumatView extends Main implements HasComponents, HasStyle {
 
     private OrderedList imageContainer;

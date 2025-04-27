@@ -1,4 +1,143 @@
-@import url('./main-layout.css');
-@import url('./views/tapahtumat-view.css');
-@import url('./views/jarjestajat-view.css');
-@import url('./views/view-view.css');
+:root {
+  --taustavari: #ffffff;
+  --tekstivari: #000000;
+  --painiketausta: #007bff;
+  --painiketeksti: #ffffff;
+  --fontti: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--taustavari);
+  color: var(--tekstivari);
+  font-family: var(--fontti);
+}
+
+button, .vaadin-button {
+  background-color: var(--painiketausta);
+  color: var(--painiketeksti);
+}
+
+.custom-nav {
+  background-color: var(--taustavari);
+  color: var(--tekstivari);
+  font-family: var(--fontti);
+}
+
+.custom-nav vaadin-side-nav-item[selected] {
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
+
+vaadin-text-field::part(label),
+vaadin-select::part(label) {
+  color: var(--tekstivari);
+  font-family: var(--fontti);
+}
+
+
+vaadin-button {
+  background-color: var(--painiketausta);
+  color: var(--painiketeksti);
+  font-family: var(--fontti);
+}
+
+:host([theme~="dark"]) [part="navbar"],
+::part(navbar) {
+  background-color: var(--taustavari);
+  color: var(--tekstivari);
+  font-family: var(--fontti);
+}
+
+vaadin-select::part(label) {
+  color: var(--tekstivari);
+  font-family: var(--fontti);
+}
+
+vaadin-select::part(text-field) {
+  color: var(--tekstivari);
+  font-family: var(--fontti);
+}
+
+
+vaadin-select::part(value) {
+    background-color: var(--taustavari);
+  color: var(--tekstivari);
+  font-family: var(--fontti);
+}
+
+vaadin-select::part(toggle-button) {
+  color: var(--tekstivari);
+}
+
+vaadin-select-overlay::part(content) {
+  background-color: var(--taustavari);
+  color: var(--tekstivari);
+  font-family: var(--fontti);
+}
+
+#page-title {
+  color: var(--tekstivari);
+  font-family: var(--fontti);
+}
+
+
+vaadin-text-field::part(label),
+vaadin-password-field::part(label) {
+  color: black !important;
+  font-family: var(--fontti);
+}
+
+
+
+
+vaadin-grid {
+  font-family: var(--fontti);
+  color: var(--tekstivari);
+  background-color: var(--taustavari);
+  border: 1px solid #ccc;
+}
+
+vaadin-grid::part(header-cell),
+vaadin-grid::part(body-cell) {
+  padding: 0.75rem;
+  font-size: 14px;
+  color: var(--tekstivari);
+}
+
+vaadin-grid::part(row):hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+vaadin-button {
+  background-color: var(--painiketausta);
+  color: var(--painiketeksti);
+  border-radius: 4px;
+  padding: 0.3em 1em;
+  font-size: 14px;
+}
+
+vaadin-button:hover {
+  filter: brightness(0.95);
+}
+
+vaadin-button.danger-button {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+
+vaadin-text-field {
+  font-family: var(--fontti);
+  color: var(--tekstivari);
+}
+
+vaadin-text-field::part(label) {
+  color: var(--tekstivari);
+}
+
+.horizontal-filters vaadin-button {
+  background-color: var(--painiketausta);
+  color: var(--painiketeksti);
+}
+
